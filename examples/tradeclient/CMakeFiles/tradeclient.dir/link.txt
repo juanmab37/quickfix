@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O2 -g -DNDEBUG   CMakeFiles/tradeclient.dir/Application.cpp.o CMakeFiles/tradeclient.dir/tradeclient.cpp.o  -o tradeclient -rdynamic -lquickfix -fexceptions -finline-functions -lmysqlclient -lpthread -Wl,-rpath,/home/jmbaruffaldi/Descargas/Desarrollo/latest/quickfix/src/C++ 

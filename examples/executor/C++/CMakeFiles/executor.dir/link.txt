@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O2 -g -DNDEBUG   CMakeFiles/executor.dir/Application.cpp.o CMakeFiles/executor.dir/executor.cpp.o  -o executor -rdynamic -lquickfix -fexceptions -finline-functions -lmysqlclient -lpthread -Wl,-rpath,/home/jmbaruffaldi/Descargas/Desarrollo/latest/quickfix/src/C++ 

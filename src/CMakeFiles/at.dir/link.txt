@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O2 -g -DNDEBUG   CMakeFiles/at.dir/at.cpp.o CMakeFiles/at.dir/getopt.c.o  -o at -rdynamic C++/libquickfix.so.16.0.1 -lmysqlclient -lpthread -Wl,-rpath,/home/jmbaruffaldi/Descargas/Desarrollo/latest/quickfix/src/C++ 

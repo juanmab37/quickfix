@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O2 -g -DNDEBUG   CMakeFiles/ordermatch_ut.dir/ordermatch_ut.cpp.o CMakeFiles/ordermatch_ut.dir/Market.cpp.o  -o ordermatch_ut -rdynamic ../../../src/C++/libquickfix.so.16.0.1 ../../../UnitTest++/libUnitTest++.a -lmysqlclient -lpthread -Wl,-rpath,/home/jmbaruffaldi/Descargas/Desarrollo/latest/quickfix/src/C++ 
