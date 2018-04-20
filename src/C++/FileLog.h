@@ -63,7 +63,7 @@ private:
 /**
  * File based implementation of Log
  *
- * Two files are created by this implementation.  One for messages, 
+ * Two files are created by this implementation.  One for messages,
  * and one for events.
  *
  */
@@ -80,20 +80,15 @@ public:
   void backup();
 
   void onIncoming( const std::string& value )
-  { m_messages << UtcTimeStampConvertor::convert(UtcTimeStamp(), m_millisecondsInTimeStamp) << " : " << value << std::endl; }
+  { m_messages << UtcTimeStampConvertor::convert(UtcTimeStamp(), 9) << " : " << value << std::endl; }
   void onOutgoing( const std::string& value )
-  { m_messages << UtcTimeStampConvertor::convert(UtcTimeStamp(), m_millisecondsInTimeStamp) << " : " << value << std::endl; }
+  { m_messages << UtcTimeStampConvertor::convert(UtcTimeStamp(), 9) << " : " << value << std::endl; }
   void onEvent( const std::string& value )
   {
     UtcTimeStamp now;
-    m_event << UtcTimeStampConvertor::convert( now, m_millisecondsInTimeStamp )
+    m_event << UtcTimeStampConvertor::convert( now, 9 )
             << " : " << value << std::endl;
   }
-
-  bool getMillisecondsInTimeStamp() const
-  { return m_millisecondsInTimeStamp; }
-  void setMillisecondsInTimeStamp ( bool value )
-  { m_millisecondsInTimeStamp = value; }
 
 private:
   std::string generatePrefix( const SessionID& sessionID );
@@ -105,7 +100,6 @@ private:
   std::string m_eventFileName;
   std::string m_fullPrefix;
   std::string m_fullBackupPrefix;
-  bool m_millisecondsInTimeStamp;
 };
 }
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 JM
 
@@ -14,6 +15,8 @@ a compile flag.
 
 5. Arbitrary precision (upto nanoseconds) timestamps need to be handled.
 
+=======
+>>>>>>> quickfix/master
 BUILDING AND INSTALLING
 
     Full instructions:
@@ -26,7 +29,6 @@ BUILDING AND INSTALLING
         make check
         sudo make install
 
-
 For SunOS and AIX have a look at README.SunOS and README.AIX.
 
 --------------------------------------------------------------------
@@ -34,11 +36,22 @@ For SunOS and AIX have a look at README.SunOS and README.AIX.
 It is possible to build many components with a relatively newer version of cmake.
 
 
+<<<<<<< HEAD
+=======
+For example on Windows,
+
+mkdir build
+cd build
+cmake  -DHAVE_SSL=ON -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX:PATH="install-path" -DOPENSSL_ROOT_DIR="path to openssl" ..
+Then build in Visual Studio or on command prompt.
+
+>>>>>>> quickfix/master
 On Linux (with system openssl),
 
 cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DHAVE_SSL=ON -DCMAKE_INSTALL_PREFIX:PATH="install-path" ..
 make -j 4 install
 
+<<<<<<< HEAD
 or ...
 
 cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DHAVE_MYSQL=ON -DCMAKE_INSTALL_PREFIX:PATH="/home/jbaruffaldi/"  -DCMAKE_CXX_FLAGS="-std=c++11"
@@ -49,4 +62,7 @@ Si falla por linkeo agregar (-lquickfix -fexceptions -finline-functions) en los 
 quickfix_o/examples/executor/C++/CMakeFiles/executor.dir/link.txt
 
 /usr/bin/c++   -std=c++11 -O2 -g -DNDEBUG   CMakeFiles/tradeclient.dir/Application.cpp.o CMakeFiles/tradeclient.dir/tradeclient.cpp.o  -o tradeclient -rdynamic -lquickfix -fexceptions -finline-functions -lmysqlclient -lpthread -Wl,-rpath,/home/jbaruffaldi/repositorios/quickfix_o/src/C++ 
+=======
+If one has Ninja then (with system openssl),
+>>>>>>> quickfix/master
 
