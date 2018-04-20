@@ -5424,7 +5424,7 @@
   <field number='15' name='Currency' type='CURRENCY' />
   <field number='16' name='EndSeqNo' type='SEQNUM' />
   <field number='17' name='ExecID' type='STRING' />
-  <field number='18' name='ExecInst' type='MULTIPLECHARVALUE'>
+  <field number='18' name='ExecInst' type='MULTIPLESTRINGVALUE'>
    <value enum='0' description='STAY_ON_OFFER_SIDE' />
    <value enum='1' description='NOT_HELD' />
    <value enum='2' description='WORK' />
@@ -5481,7 +5481,11 @@
    <value enum='r' description='EXECUTE_AS_DELTA_NEUTRAL_USING_VOLATILITY_PROVIDED' />
    <value enum='s' description='EXECUTE_AS_DURATION_NEUTRAL' />
    <value enum='t' description='EXECUTE_AS_FX_NEUTRAL' />
-   <value enum='Go' description='AON' />    
+   <value enum='Go' description='AON' />
+   <value enum='Zo' description='CANCEL_IF_NOT_BEST_2' />    
+   <value enum='Gx' description='AON1' />
+   <value enum='xG' description='AON2' />
+   <value enum='GZ' description='AON3' />
   </field>
   <field number='19' name='ExecRefID' type='STRING' />
   <field number='21' name='HandlInst' type='CHAR'>
