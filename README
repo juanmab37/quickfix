@@ -1,60 +1,25 @@
-<<<<<<< HEAD
 
-JM
+sudo apt-get install g++ automake libtool libxml2 libxml2-dev
+sudo apt-get install ruby ruby-dev libpq-dev xsltproc
+sudo apt install cmake
+sudo apt install swig
 
-This is a fork to meet my requirements. If you have no specific requirements fulfilled by this fork, then it would be better to use the original. It may be of interest when:
+Instalacion:
 
-1. SSL connections are required.
-
-2. SunOS or AIX are platforms of interest.
-
-3. Order of fields/tags for outgoing messages is important (configurable, not on by default).
-
-4. There is also some EMX platform related functionality which can be enabled through
-a compile flag.
-
-5. Arbitrary precision (upto nanoseconds) timestamps need to be handled.
-
-=======
->>>>>>> quickfix/master
-BUILDING AND INSTALLING
-
-    Full instructions:
-        See doc/html/building.html
-
-    Quick instructions:
-        ./bootstrap
-        ./configure
-        make
-        make check
-        sudo make install
-
-For SunOS and AIX have a look at README.SunOS and README.AIX.
-
---------------------------------------------------------------------
-
-It is possible to build many components with a relatively newer version of cmake.
+cd spec
+./generate.sh
+#cambiar fit11sp
+./swig.sh
+#automake
+./bootstrap
+./configure --with-python2=/usr/include/python2.7/
+make
+sudo make install
 
 
-<<<<<<< HEAD
-=======
-For example on Windows,
+Opcion 2:
 
-mkdir build
-cd build
-cmake  -DHAVE_SSL=ON -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX:PATH="install-path" -DOPENSSL_ROOT_DIR="path to openssl" ..
-Then build in Visual Studio or on command prompt.
-
->>>>>>> quickfix/master
-On Linux (with system openssl),
-
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DHAVE_SSL=ON -DCMAKE_INSTALL_PREFIX:PATH="install-path" ..
-make -j 4 install
-
-<<<<<<< HEAD
-or ...
-
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DHAVE_MYSQL=ON -DCMAKE_INSTALL_PREFIX:PATH="/home/jbaruffaldi/"  -DCMAKE_CXX_FLAGS="-std=c++11"
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DHAVE_MYSQL=ON -DCMAKE_INSTALL_PREFIX:PATH="/home/testing2/Instalaciones"  -DCMAKE_CXX_FLAGS="-std=c++11"
 make -j 4 install
 
 Si falla por linkeo agregar (-lquickfix -fexceptions -finline-functions) en los examples que falle el archivo link o descargarlo del repositorio. Ejemplo:
@@ -62,7 +27,18 @@ Si falla por linkeo agregar (-lquickfix -fexceptions -finline-functions) en los 
 quickfix_o/examples/executor/C++/CMakeFiles/executor.dir/link.txt
 
 /usr/bin/c++   -std=c++11 -O2 -g -DNDEBUG   CMakeFiles/tradeclient.dir/Application.cpp.o CMakeFiles/tradeclient.dir/tradeclient.cpp.o  -o tradeclient -rdynamic -lquickfix -fexceptions -finline-functions -lmysqlclient -lpthread -Wl,-rpath,/home/jbaruffaldi/repositorios/quickfix_o/src/C++ 
-=======
-If one has Ninja then (with system openssl),
->>>>>>> quickfix/master
+
+
+Update Fork:
+git remote add --track master quickfix git://github.com/quickfix/quickfix.git
+git remote
+git fetch quickfix
+git merge quickfix/master
+git push
+
+
+
+
+
+
 
