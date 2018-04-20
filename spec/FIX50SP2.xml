@@ -5481,6 +5481,7 @@
    <value enum='r' description='EXECUTE_AS_DELTA_NEUTRAL_USING_VOLATILITY_PROVIDED' />
    <value enum='s' description='EXECUTE_AS_DURATION_NEUTRAL' />
    <value enum='t' description='EXECUTE_AS_FX_NEUTRAL' />
+   <value enum='Go' description='AON' />    
   </field>
   <field number='19' name='ExecRefID' type='STRING' />
   <field number='21' name='HandlInst' type='CHAR'>
@@ -5542,6 +5543,9 @@
   <field number='33' name='NoLinesOfText' type='NUMINGROUP' />
   <field number='34' name='MsgSeqNum' type='SEQNUM' />
   <field number='35' name='MsgType' type='STRING'>
+   <value enum='UALI' description='ACCOUNTLISTINCREMENTAL' />
+   <value enum='UALT' description='ACCOUNTLIST' />
+   <value enum='UALR' description='ACCOUNTLISTREQUEST' />
    <value enum='0' description='HEARTBEAT' />
    <value enum='1' description='TESTREQUEST' />
    <value enum='2' description='RESENDREQUEST' />
@@ -7820,13 +7824,14 @@
   <field number='623' name='LegRatioQty' type='FLOAT' />
   <field number='624' name='LegSide' type='CHAR' />
   <field number='625' name='TradingSessionSubID' type='STRING'>
-   <value enum='1' description='PRE_TRADING' />
-   <value enum='2' description='OPENING_OR_OPENING_AUCTION' />
-   <value enum='3' description='3' />
-   <value enum='4' description='CLOSING_OR_CLOSING_AUCTION' />
-   <value enum='5' description='POST_TRADING' />
-   <value enum='6' description='INTRADAY_AUCTION' />
-   <value enum='7' description='QUIESCENT' />
+   <value enum='0' description='PRE_TRADING' />
+   <value enum='1' description='TRADING' />
+   <value enum='2' description='POST_TRADING' />
+   <value enum='3' description='AFTER_HOUR' />
+   <value enum='4' description='CLOSED' />
+   <value enum='5' description='INTRADAY_AUCTION' />
+   <value enum='6' description='RE_OPENING' />
+   <value enum='z' description='CLOSING_PRICE_CROSS' />
   </field>
   <field number='626' name='AllocType' type='INT'>
    <value enum='1' description='CALCULATED' />
@@ -8398,6 +8403,9 @@
    <value enum='1' description='BLOCK_TRADE_1' />
    <value enum='2' description='EFP' />
    <value enum='3' description='TRANSFER' />
+   <value enum='1001' description='ALLOCATION' />
+   <value enum='1002' description='GIVE_UP' />
+   <value enum='1003' description='FLOOR_TRADE' /> 
    <value enum='4' description='LATE_TRADE' />
    <value enum='5' description='T_TRADE' />
    <value enum='6' description='WEIGHTED_AVERAGE_PRICE_TRADE' />

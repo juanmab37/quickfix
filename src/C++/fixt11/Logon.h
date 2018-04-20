@@ -26,6 +26,7 @@ namespace FIXT11
       set(aDefaultApplVerID);
     }
 
+    FIELD_SET(*this, FIX::Text);
     FIELD_SET(*this, FIX::EncryptMethod);
     FIELD_SET(*this, FIX::HeartBtInt);
     FIELD_SET(*this, FIX::RawDataLength);

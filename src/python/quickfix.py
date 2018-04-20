@@ -6,7 +6,7 @@
 
 
 
-
+print("Quickfix fork")
 
 from sys import version_info
 if version_info >= (2, 6, 0):
@@ -37277,6 +37277,11 @@ TradingSessionSubID_CLOSING_OR_CLOSING_AUCTION = cvar.TradingSessionSubID_CLOSIN
 TradingSessionSubID_POST_TRADING = cvar.TradingSessionSubID_POST_TRADING
 TradingSessionSubID_INTRADAY_AUCTION = cvar.TradingSessionSubID_INTRADAY_AUCTION
 TradingSessionSubID_QUIESCENT = cvar.TradingSessionSubID_QUIESCENT
+TradingSessionSubID_TRADING = cvar.TradingSessionSubID_TRADING
+TradingSessionSubID_AFTER_HOUR = cvar.TradingSessionSubID_AFTER_HOUR
+TradingSessionSubID_CLOSED = cvar.TradingSessionSubID_CLOSED
+TradingSessionSubID_RE_OPENING = cvar.TradingSessionSubID_RE_OPENING
+TradingSessionSubID_CLOSING_PRICE_CROSS = cvar.TradingSessionSubID_CLOSING_PRICE_CROSS
 AllocType_BUYSIDE_READY_TO_BOOK_6 = cvar.AllocType_BUYSIDE_READY_TO_BOOK_6
 AllocType_BUYSIDE_PRELIMINARY = cvar.AllocType_BUYSIDE_PRELIMINARY
 AllocType_SELLSIDE_CALCULATED_USING_PRELIMINARY = cvar.AllocType_SELLSIDE_CALCULATED_USING_PRELIMINARY
@@ -37698,6 +37703,9 @@ TrdType_EXCHANGE_GRANTED_TRADE = cvar.TrdType_EXCHANGE_GRANTED_TRADE
 TrdType_REPURCHASE_AGREEMENT = cvar.TrdType_REPURCHASE_AGREEMENT
 TrdType_OTC = cvar.TrdType_OTC
 TrdType_EXCHANGE_BASIS_FACILITY = cvar.TrdType_EXCHANGE_BASIS_FACILITY
+TrdType_ALLOCATION = cvar.TrdType_ALLOCATION
+TrdType_GIVE_UP = cvar.TrdType_GIVE_UP
+TrdType_FLOOR_TRADE = cvar.TrdType_FLOOR_TRADE
 TrdSubType_CMTA = cvar.TrdSubType_CMTA
 TrdSubType_INTERNAL_TRANSFER_OR_ADJUSTMENT = cvar.TrdSubType_INTERNAL_TRANSFER_OR_ADJUSTMENT
 TrdSubType_EXTERNAL_TRANSFER_OR_TRANSFER_OF_ACCOUNT = cvar.TrdSubType_EXTERNAL_TRANSFER_OR_TRANSFER_OF_ACCOUNT
